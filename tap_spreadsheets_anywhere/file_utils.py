@@ -201,9 +201,8 @@ def evaluate_row_level_date_criteria(target_file_name, table_spec, modified_sinc
             dates_list = [parse(date) for date in records_list if not date is None]             
             max_date_list.append(max(dt for dt in dates_list))
     latest_modified_record = max(dt for dt in max_date_list)
-    #latest_modified_record = max(dates_list)
         
-            # noinspection PyTypeChecker
+    # noinspection PyTypeChecker
     LOGGER.info(modified_since)
     LOGGER.info(latest_modified_record)
     if (modified_since is None or modified_since < latest_modified_record):
