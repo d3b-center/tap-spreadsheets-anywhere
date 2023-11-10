@@ -4,6 +4,7 @@ import pytz
 from datetime import datetime, timezone
 
 import dateutil
+from dateutil.parser import parse
 import requests
 import singer
 import boto3
